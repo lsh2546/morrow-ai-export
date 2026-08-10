@@ -1,6 +1,8 @@
 
 # MorrowAI Agentic Payments Lab
 
+Licensed under the [MIT License](LICENSE).
+
 MorrowAI is a technical demonstration of a future autonomous economic agent.
 Gemini evaluates whether a completed supplier task warrants payment, a
 deterministic policy engine enforces recipient and spending limits, and a
