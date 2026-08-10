@@ -1,30 +1,34 @@
-# MorrowAI
 
-MorrowAI is a Gemini-powered export operator for small businesses. A founder
-describes a local product and commercial goal; an AI agent selects a target
-market, creates localized buyer positioning, recommends acquisition channels,
-and records every decision for human approval.
+# MorrowAI Agentic Payments Lab
+
+MorrowAI is a technical demonstration of a future autonomous economic agent.
+Gemini evaluates whether a completed supplier task warrants payment, a
+deterministic policy engine enforces recipient and spending limits, and a
+Circle testnet adapter executes the payment without a human click.
+
+This is explicitly a **testnet technology demo**. It does not claim real
+customers, real revenue, production payments, or mainnet settlement.
 
 ## Build with Gemini XPRIZE
 
-- **Category:** Small Business Services
+- **Prize focus:** Circle Agentic Economy Prize
 - **Production URL:** https://morrow-ai-export.ljs2546.chatgpt.site
 - **Google model:** `gemini-3.6-flash`
 - **Google Cloud requirement:** Gemini API plus production-hosted structured
   storage
-- **AI-native operation:** market analysis and campaign preparation
-- **Human responsibility:** final campaign approval
+- **AI-native operation:** autonomous payment necessity decision
+- **Human responsibility:** define the policy before the agent runs
 
 ## Product workflow
 
-1. A user submits a product and market objective.
-2. Gemini selects a country and buyer segment.
-3. Gemini creates a localized headline, pitch, channel plan, rationale, and
-   confidence score.
-4. The result and execution metadata are saved.
-5. A human approves or requests revision.
-6. The control room reports users, analyses, Gemini calls, approvals, and
-   recent agent logs.
+1. The agent receives a completed task, delivery evidence, recipient, and amount.
+2. Gemini decides whether the evidence warrants payment.
+3. The policy engine checks the 25 USDC cap, recipient allowlist, evidence, and
+   testnet-only rule.
+4. When every rule passes, the agent executes without transaction-time human
+   approval.
+5. AI, policy, execution, and audit-seal events are stored separately.
+6. A blocked scenario proves the system fails closed before provider execution.
 
 ## Evidence and data
 
@@ -34,7 +38,22 @@ Durable records are stored in the production database:
   mode
 - `execution_logs`: timestamp, AI/human actor, model, status, latency, and
   execution detail
-- `feedback`: customer feedback and paid-pilot interest
+- `agent_payments`: task evidence, policy outcome, execution mode, provider
+  status, transaction reference, and completion status
+
+## Circle testnet
+
+Without Circle credentials the UI transparently labels the result
+`sandbox_simulation`. A submission-grade testnet run requires these hosted
+secrets:
+
+- `CIRCLE_API_KEY`
+- `CIRCLE_WALLET_ID`
+- `CIRCLE_USDC_TOKEN_ID`
+- `CIRCLE_DESTINATION_ADDRESS`
+- `CIRCLE_ENTITY_SECRET_CIPHERTEXT`
+
+Only testnet wallets and test USDC may be configured.
 
 The submission-ready evidence index is in
 [`product-evidence/`](product-evidence/README.md).
@@ -72,6 +91,6 @@ The production verification recorded on July 30, 2026 returned HTTP 200 with
 
 ## Privacy
 
-Customer contact details and raw production exports must not be committed.
-Share personal customer evidence only through the private Devpost judging
-channel after obtaining customer consent.
+Secrets, private keys, entity secrets, and raw provider responses containing
+sensitive information must never be committed. Submission evidence must contain
+only sanitized testnet records.
