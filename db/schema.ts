@@ -1,3 +1,4 @@
+
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 export const missions = sqliteTable("missions", {
@@ -32,4 +33,22 @@ export const feedback = sqliteTable("feedback", {
   note: text("note"),
   pilotInterest: integer("pilot_interest").notNull(),
   createdAt: text("created_at").notNull(),
+});
+
+export const agentPayments = sqliteTable("agent_payments", {
+  id: text("id").primaryKey(),
+  actorId: text("actor_id").notNull(),
+  task: text("task").notNull(),
+  evidence: text("evidence").notNull(),
+  vendor: text("vendor").notNull(),
+  amountUsdc: integer("amount_usdc").notNull(),
+  decisionJson: text("decision_json").notNull(),
+  policyJson: text("policy_json").notNull(),
+  executionMode: text("execution_mode").notNull(),
+  providerHttpStatus: integer("provider_http_status").notNull(),
+  transactionId: text("transaction_id"),
+  transactionHash: text("transaction_hash"),
+  status: text("status").notNull(),
+  createdAt: text("created_at").notNull(),
+  completedAt: text("completed_at").notNull(),
 });
