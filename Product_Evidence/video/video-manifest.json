@@ -1,0 +1,14 @@
+
+{
+  "file": "morrow-ai-circle-testnet-demo.avi",
+  "duration_seconds": 180,
+  "resolution": "1280x720",
+  "frames_per_second": 2,
+  "video_codec": "Motion JPEG",
+  "audio_codec": "PCM 16-bit mono",
+  "audio_sample_rate": 22050,
+  "technology_demo": true,
+  "network": "ARC-TESTNET",
+  "asset": "Test USDC",
+  "transaction_hash": "0xae4116dadcf2444380b78fb8b195f4077f195deb68b8efbfe0280b00cbc48b89"
+}
