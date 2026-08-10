@@ -1,0 +1,22 @@
+
+{
+  "evidenceType": "Circle Testnet autonomous payment",
+  "disclosure": "Technology demonstration only; not a production payment system or real customer transaction.",
+  "recordedAt": "2026-07-31T03:52:15.409Z",
+  "network": "ARC-TESTNET",
+  "asset": "USDC",
+  "amount": "1",
+  "direction": "outbound",
+  "sourceWalletId": "c1744181-a32b-5518-a729-e786606f6cfb",
+  "sourceWalletAddress": "0xa2cf5537feeeb26a36a51aa83cc24cd6c128bd6a",
+  "destinationAddress": "0x8033fb4151e985e9ed1be01c3dfae6a2bfc24572",
+  "httpStatus": 201,
+  "apiState": "INITIATED",
+  "finalState": "COMPLETE",
+  "circleTransactionId": "b7728847-f3ee-5c6b-94cf-6847107e3538",
+  "transactionHash": "0xae4116dadcf2444380b78fb8b195f4077f195deb68b8efbfe0280b00cbc48b89",
+  "requestId": "84c03ce2-6f84-4591-86c3-4f7bea3362d4",
+  "idempotencyKey": "e60dc8e3-e50b-4282-88bf-9441edcaf646",
+  "feeLevel": "LOW",
+  "humanVsAi": "Human initiated this one-time setup verification; product runtime is designed to log AI decision separately from Circle execution."
+}
