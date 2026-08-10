@@ -11,8 +11,8 @@ information, or fabricated customers and revenue.
   capture checklist
 - [`architecture.md`](architecture.md): Gemini decision, deterministic policy,
   autonomous execution, and audit boundaries
-- [`submission-checklist.md`](submission-checklist.md): remaining work before
-  submission
+- [`live-verification-2026-08-10.json`](live-verification-2026-08-10.json):
+  approved and blocked production verification results
 - [`production-verification.json`](production-verification.json): earlier
   verified production Gemini call; it is not Circle transaction evidence
 
