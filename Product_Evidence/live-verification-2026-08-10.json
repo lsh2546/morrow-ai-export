@@ -1,0 +1,22 @@
+
+{
+  "productionUrl": "https://morrow-ai-export.ljs2546.chatgpt.site",
+  "verifiedAt": "2026-08-10T05:07:46.675Z",
+  "approvedScenario": {
+    "paymentId": "pay_0707b8b1-4f63-45f7-a46e-c791b0df74e6",
+    "gemini": { "live": true, "model": "gemini-3.6-flash", "httpStatus": 200 },
+    "policy": { "passed": true, "maxAutonomousUsdc": 25 },
+    "circle": { "mode": "circle_testnet", "httpStatus": 201, "state": "INITIATED", "transactionId": "c331f9fc-4dad-5e9f-ac45-f312404509e7" },
+    "status": "executed"
+  },
+  "blockedScenario": {
+    "paymentId": "pay_39db31fe-f8b8-4cc7-902a-9038620136ca",
+    "requestedAmountUsdc": 30,
+    "gemini": { "live": true, "model": "gemini-3.6-flash", "httpStatus": 200, "approved": true },
+    "policy": { "passed": false, "amountWithinLimit": false },
+    "circle": { "mode": "not_executed", "state": "BLOCKED" },
+    "status": "blocked"
+  },
+  "auditStages": ["payment_decision", "policy_check", "payment_execution", "audit_seal"],
+  "disclosure": "Technology demonstration only. All payment execution uses Circle Testnet and Test USDC."
+}
