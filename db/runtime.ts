@@ -1,3 +1,4 @@
+
 import { env } from "cloudflare:workers";
 
 let ready: Promise<void> | null = null;
@@ -24,8 +25,16 @@ export async function ensureSchema() {
       id TEXT PRIMARY KEY, actor_id TEXT NOT NULL, name TEXT NOT NULL, email TEXT NOT NULL,
       company TEXT, note TEXT, pilot_interest INTEGER NOT NULL, created_at TEXT NOT NULL
     )`).run(),
+    db.prepare(`CREATE TABLE IF NOT EXISTS agent_payments (
+      id TEXT PRIMARY KEY, actor_id TEXT NOT NULL, task TEXT NOT NULL, evidence TEXT NOT NULL,
+      vendor TEXT NOT NULL, amount_usdc REAL NOT NULL, decision_json TEXT NOT NULL,
+      policy_json TEXT NOT NULL, execution_mode TEXT NOT NULL, provider_http_status INTEGER NOT NULL,
+      transaction_id TEXT, transaction_hash TEXT, status TEXT NOT NULL,
+      created_at TEXT NOT NULL, completed_at TEXT NOT NULL
+    )`).run(),
     db.prepare("CREATE INDEX IF NOT EXISTS missions_actor_idx ON missions(actor_id)").run(),
     db.prepare("CREATE INDEX IF NOT EXISTS logs_time_idx ON execution_logs(occurred_at)").run(),
+    db.prepare("CREATE INDEX IF NOT EXISTS payments_time_idx ON agent_payments(created_at)").run(),
   ]).then(() => undefined);
   return ready;
 }
