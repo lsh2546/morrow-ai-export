@@ -1,7 +1,8 @@
 
 {
-  "file": "morrow-ai-circle-testnet-demo.avi",
-  "duration_seconds": 180,
+  "file": "morrow-ai-circle-testnet-demo-under-3min.mp4",
+  "youtube_url": "https://youtu.be/dbMKiEXN0qo",
+  "duration_seconds": 174.5,
   "resolution": "1280x720",
   "frames_per_second": 2,
   "video_codec": "Motion JPEG",
